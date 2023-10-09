@@ -1,0 +1,20 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "A simple pie chart with embedded data.",
+    "data": {"url": "Crash_Data.csv"},
+    "transform": [
+        {
+          "aggregate": [{ "op": "count", "field": "Time of day", "as": "count" }],
+          "groupby": ["Time of day"]
+        }
+      ],
+    "mark": "arc",
+    "encoding": {
+      "theta": {"field": "count", "type": "quantitative", "stack": true},
+      "color": {"field": "Time of day", "type": "nominal"},
+      "tooltip": [
+        { "field": "Time of day", "type": "nominal", "title": "Time of day" },
+        { "field": "count", "type": "quantitative", "title": "Count" }
+      ]
+    }
+  }
