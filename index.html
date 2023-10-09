@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Multiple Visualisations | An Example</title>
+  <title>Car Crashes</title>
   <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
   <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
@@ -29,10 +29,10 @@
   <div class="page">
 
     <!-- pure grid group -->
-    <div class="pure-g">
-      <div class="pure-u-1-1">
-        <h1>Multiple Visualisations</h1>
-        <p>This page demonstrates how you can use pure.css grid for your layout.</p>
+    <div class="center" style= "height: 400px;background-image: url(./broken_glass.png)">
+      <div class="pure-u-1-1" style="width: 100%;">
+        <h1>Car Crashes</h1>
+        <IMG SRC="carskid.gif"></IMG>
       </div>
     </div>
     <!-- end pure grid group -->
@@ -41,11 +41,8 @@
     <div class="pure-g">
       <div class="pure-u-1-2">
         <div class="description description-left">
-          <h2>Two Columns Layout</h2>
-          <p>The first column contains text and the second column contains a visualisation.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. </p>
+          <h2>Car crash data</h2>
+          <p>Car crash Car crash Car crash Car crash Car crash Car crash</p>
         </div>
       </div>
       <div class="pure-u-1-2">
@@ -58,10 +55,8 @@
     <div class="pure-g">
       <div class="pure-u-1-3">
         <div class="description description-left">
-          <h2>Three Equal Columns</h2>
-          <p>Using all three columns without merging. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat
-            sed. Egestas purus viverra accumsan in nisl. Egestas purus viverra accumsan in nisl.</p>
+          <h2>More car crash data</h2>
+          <p>More car crash data More car crash data More car crash data</p>
         </div>
       </div>
       <div class="pure-u-1-3">
@@ -81,18 +76,47 @@
       </div>
       <div class="pure-u-1-3">
         <div class="description description-right">
-          <h2>First and Second Columns Combined</h2>
-          <p>The first and second columns are combined.</p>
+          <h2>Even more crashes sadly</h2>
+          <p>Even more crashes sadlyEven more crashes sadlyEven more crashes sadlyEven more crashes sadly</p>
         </div>
       </div>
 
     </div>
     <!-- end pure grid group -->
 
+    <!-- pure grid group -->
+    <div class="pure-g">
+        <div class="pure-u-2-3">
+          <div id="vis5" class="vis-container"></div>
+        </div>
+        <div class="pure-u-1-3">
+          <div class="description description-right">
+            <h2>Drive Safely</h2>
+            <p>Pleas drive safe Pleas drive safe Pleas drive safe Pleas drive safe Pleas drive safe</p>
+          </div>
+        </div>
+  
+    </div>
+    <!-- end pure grid group -->
+
+    <!-- pure grid group -->
+    <div class="pure-g">
+      <div class="pure-u-2-3">
+        <div id="vis6" class="vis-container"></div>
+      </div>
+      <div class="pure-u-1-3">
+        <div class="description description-right">
+          <h2>First and Second Columns Combined</h2>
+          <p>The first and second columns are combined.</p>
+        </div>
+      </div>
+
+    </div>
+  <!-- end pure grid group -->
+
     <div class="pure-g">
       <div class="pure-u-1-1 small-font">
-        <p>This visualisation is created by <a href="https://fit3179.github.io/Vega-Lite/" target="_blank">FIT3179
-            Teaching Team</a>. The datasource is <a href="#" target=" _blank">some data repository online</href>.</p>
+        <p></p>
       </div>
     </div>
 
@@ -102,18 +126,29 @@
   <script type="text/javascript">
     var specVis1 = "./normalised-stacked-bars-responsive.json";
     var specVis2 = "./line-chart-responsive.json";
+    var specVis3 = "./state-chart.json";
+    var specVis4 = "./day-and-time.json";
+    var specVis5 = "./dayweek-pie.json";
 
-    vegaEmbed('#vis1', specVis1, { "actions": false });
+    vegaEmbed('#vis1', specVis3, { "actions": false });
 
-    vegaEmbed('#vis2', specVis2, { "actions": false }).then(function (result) {
+    vegaEmbed('#vis2', specVis3, { "actions": false }).then(function (result) {
       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
 
-    vegaEmbed('#vis3', specVis1, { "actions": false }).then(function (result) {
+    vegaEmbed('#vis3', specVis5, { "actions": false }).then(function (result) {
       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
 
-    vegaEmbed('#vis4', specVis2, { "actions": false }).then(function (result) {
+    vegaEmbed('#vis4', specVis3, { "actions": false }).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    vegaEmbed('#vis5', specVis3, { "actions": false }).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    vegaEmbed('#vis6', specVis4, { "actions": false }).then(function (result) {
       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
   </script>

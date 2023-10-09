@@ -3,7 +3,9 @@ body *{
 }
 
 h1 {
-    font-weight: 900;
+    font-weight: bold;
+    font-size: 60px;
+    align-self: center;
 }
 
 body {
@@ -41,4 +43,12 @@ h1 {
 
 .small-font {
     font-size: 14px;
+}
+
+.center{
+    text-align: center;
+}
+
+.background-image {
+    background-image: url("./gratis-png-gran-abertura-de-vidrio-roto.png")
 }

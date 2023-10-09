@@ -1,0 +1,25 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {"url": "Crash_Data.csv"},
+    "transform": [
+      {
+        "calculate": "'01 ' + datum.Month + ' ' + datum.Year + ' ' + datum.Time",
+        "as": "datetime"
+      }
+    ],
+    "mark": "point",
+    "encoding": {
+      "x": {
+        "field": "datetime",
+        "type": "ordinal",
+        "axis": {"title": "Time"},
+        "timeUnit": "hoursminutes"
+      },
+      "y": {
+        "timeUnit": "day",
+        "field": "Dayweek",
+        "type": "temporal"
+      },
+      "size": {"aggregate": "count"}
+    }
+  }

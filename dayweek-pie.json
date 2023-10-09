@@ -1,0 +1,20 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "A simple pie chart with embedded data.",
+    "data": {"url": "Crash_Data.csv"},
+    "transform": [
+        {
+          "aggregate": [{ "op": "count", "field": "Dayweek", "as": "count" }],
+          "groupby": ["Dayweek"]
+        }
+      ],
+    "mark": "arc",
+    "encoding": {
+      "theta": {"field": "count", "type": "quantitative", "stack": true},
+      "color": {"field": "Dayweek", "type": "nominal"},
+      "tooltip": [
+        { "field": "Dayweek", "type": "nominal", "title": "Day of the Week" },
+        { "field": "count", "type": "quantitative", "title": "Count" }
+      ]
+    }
+  }

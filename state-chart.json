@@ -1,0 +1,31 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+      "url": "Crash_Data.csv"
+    },
+    "width": "container",
+    "mark": {
+      "type": "bar"
+    },
+    "encoding": {
+      "x": {
+        "field": "State",
+        "title": "State"
+      },
+      "y": {
+        "aggregate": "count",
+        "title": "Number of Crashes"
+      },
+      "color": {
+        "type": "nominal",
+        "field": "State",
+        "title": "State",
+        "legend":{"orient": "none", "legendX":10, "legendY":5}
+      },
+      "tooltip": [
+        {"field": "State", "type": "nominal"},
+        {"field": "Number of Crashes", "type": "quantitative", "aggregate": "count", "format": ","}
+        ]
+    },
+    "config": {}
+  }
