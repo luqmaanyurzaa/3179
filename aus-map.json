@@ -1,0 +1,47 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "Crash_Data.csv",
+    "format": {
+      "type": "csv"
+    }
+  },
+  "transform": [
+    {
+      "lookup": "State",
+      "from": {
+        "data": {
+          "url": "states.geojson"
+        },
+        "key": "State",
+        "fields": ["properties.STATE_NAME"]
+      }
+    },
+    {
+    "aggregate": [{"op": "count", "as": "State_count"}],
+    "groupby": ["State"]
+    }
+  ],
+  "width": 600,
+  "height": 600,
+  "projection": {
+    "type": "equirectangular"
+  },
+  "mark": {
+    "type": "geoshape",
+    "stroke": "white",
+    "strokeWidth": 0.5
+  },
+  "encoding": {
+    "color": {
+      "field": "State_count",
+      "scale": {
+        "scheme": "viridis"
+      },
+      "legend": {
+        "title": "Number of Crashes"
+      }
+    }
+  },
+  "config": {}
+}

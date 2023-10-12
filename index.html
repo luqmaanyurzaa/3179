@@ -124,7 +124,7 @@
   </div> <!-- end page -->
 
   <script type="text/javascript">
-    var specVis1 = "./normalised-stacked-bars-responsive.json";
+    var specVis1 = "./aus-map.json";
     var specVis2 = "./line-chart-responsive.json";
     var specVis3 = "./state-chart.json";
     var specVis4 = "./day-and-time.json";
@@ -145,7 +145,7 @@
       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
 
-    vegaEmbed('#vis5', specVis3, { "actions": false }).then(function (result) {
+    vegaEmbed('#vis5', specVis1, { "actions": false }).then(function (result) {
       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
 

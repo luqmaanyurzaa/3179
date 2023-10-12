@@ -11,10 +11,25 @@
     "mark": "arc",
     "encoding": {
       "theta": {"field": "count", "type": "quantitative", "stack": true},
-      "color": {"field": "Dayweek", "type": "nominal"},
+      "color": {
+        "field": "Dayweek", 
+        "type": "nominal", 
+        "sort": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday","Sunday"],
+        "scale": {
+            "domain": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+            "range": ["#1f77b4", "#ff7f0e", "#2ca02c", "#d62728", "#9467bd","#8c564b","#e377c2"]
+        }
+    },
       "tooltip": [
         { "field": "Dayweek", "type": "nominal", "title": "Day of the Week" },
         { "field": "count", "type": "quantitative", "title": "Count" }
       ]
+    },
+    "config": {
+        "style": {
+            "cell": {
+                "stroke": "transparent"
+            }
+        }
     }
   }

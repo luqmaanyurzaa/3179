@@ -16,5 +16,12 @@
         { "field": "Time of day", "type": "nominal", "title": "Time of day" },
         { "field": "count", "type": "quantitative", "title": "Count" }
       ]
-    }
+    },
+    "config": {
+      "style": {
+          "cell": {
+              "stroke": "transparent"
+          }
+      }
+  }
   }

@@ -27,5 +27,11 @@
         {"field": "Number of Crashes", "type": "quantitative", "aggregate": "count", "format": ","}
         ]
     },
-    "config": {}
+    "config": {
+      "style": {
+          "cell": {
+              "stroke": "transparent"
+          }
+      }
+  }
   }

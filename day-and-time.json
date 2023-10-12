@@ -1,25 +1,47 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "data": {"url": "Crash_Data.csv"},
-    "transform": [
-      {
-        "calculate": "'01 ' + datum.Month + ' ' + datum.Year + ' ' + datum.Time",
-        "as": "datetime"
-      }
-    ],
-    "mark": "point",
-    "encoding": {
-      "x": {
-        "field": "datetime",
-        "type": "ordinal",
-        "axis": {"title": "Time"},
-        "timeUnit": "hoursminutes"
-      },
-      "y": {
-        "timeUnit": "day",
-        "field": "Dayweek",
-        "type": "temporal"
-      },
-      "size": {"aggregate": "count"}
+  "$schema": "https://vega.github.io/schema/vega/v6.json",
+  "data": [
+    {
+      "name": "source",
+      "url": "Crash_Data.csv",
+      "format": {"type": "csv"}
     }
-  }
+  ],
+  "scales": [
+    {
+      "name": "x",
+      "type": "time",
+      "domain": {"data": "source", "field": "time"},
+      "range": "width"
+    },
+    {
+      "name": "y",
+      "type": "time",
+      "domain": {"data": "source", "field": "Dayweek"},
+      "range": "height"
+    },
+    {
+      "name": "size",
+      "type": "linear",
+      "domain": {"data": "source", "field": "count"},
+      "range": [20, 200]
+    }
+  ],
+  "marks": [
+    {
+      "type": "symbol",
+      "from": {"data": "source"},
+      "encode": {
+        "update": {
+          "x": {"scale": "x", "field": "datetime"},
+          "y": {"scale": "y", "field": "Dayweek"},
+          "size": {"scale": "size", "field": "count"}
+        }
+      }
+    }
+  ],
+  "axes": [
+    {"orient": "bottom", "scale": "x", "title": "Time"},
+    {"orient": "left", "scale": "y"}
+  ]
+}
