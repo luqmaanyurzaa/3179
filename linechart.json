@@ -48,11 +48,12 @@
         ]
         
     },
-    "width": 790,
+    "width": 945,
     "height": 400,
     "config": {
         "legend": {
-          "symbolStrokeWidth": 3
+          "symbolStrokeWidth": 3,
+          "orient": "top"
         }
       },
       "background": "#dddcda"
