@@ -1,0 +1,60 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "",
+    "data": {"url": "Crash_Data.csv"},
+    "mark": {"type": "line", "interpolate": "monotone"},
+    "encoding": {
+        "x": {
+            "timeUnit": "yearmonth",
+            "field": "monthyear",
+            "type": "temporal",
+            "title": "Date"
+        },
+        "y": {
+            "aggregate": "count",
+            "field": "State",
+            "type": "quantitative",
+            "title": "Number of Crashes"
+        },
+        "color": {
+            "field": "State",
+            "type": "nominal",
+            "scale": {
+                "domain": ["New South Wales", "Victoria", "Queensland", "Western Australia", "South Australia", "Northern Territory", "Tasmania", "Australian Capital Territory"],
+                "range": [
+                    "#1f77b4",
+                    "#ff7f0e",
+                    "#9467bd",
+                    "#bcbd22",
+                    "#e377c2",
+                    "#17becf",
+                    "#8c564b",
+                    "#d62728"
+                  ]
+            }
+        },
+        "strokeWidth": {"value": 2.5},
+        "tooltip": [
+            {
+                "field": "State",
+                "type": "nominal"
+            },
+            {
+                "aggregate": "count",
+                "field": "State",
+                "type": "quantitative",
+                "title": "Number of Crashes"
+            }
+        ]
+        
+    },
+    "width": 790,
+    "height": 400,
+    "config": {
+        "legend": {
+          "symbolStrokeWidth": 3
+        }
+      },
+      "background": "#dddcda"
+  }
+  

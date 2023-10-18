@@ -1,27 +1,33 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "description": "A simple pie chart with embedded data.",
-    "data": {"url": "Crash_Data.csv"},
-    "transform": [
-        {
-          "aggregate": [{ "op": "count", "field": "Time of day", "as": "count" }],
-          "groupby": ["Time of day"]
-        }
-      ],
-    "mark": "arc",
-    "encoding": {
-      "theta": {"field": "count", "type": "quantitative", "stack": true},
-      "color": {"field": "Time of day", "type": "nominal"},
-      "tooltip": [
-        { "field": "Time of day", "type": "nominal", "title": "Time of day" },
-        { "field": "count", "type": "quantitative", "title": "Count" }
-      ]
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "A simple pie chart with embedded data.",
+  "data": {"url": "Crash_Data.csv"},
+  "mark": "bar",
+  "encoding": {
+    "y": {"aggregate": "count", "type": "quantitative", "title": "Count"},
+    "x": {"field": "Dayweek", "type": "ordinal", "title": "Day of the Week",
+    "sort": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday","Sunday"]},
+    "color": {
+      "field": "Timeofday",
+      "sort": ["Day", "Night"],
+      "scale": {
+        "domain": ["Day", "Night"],
+        "range": ["#ff7f0e","#1f77b4"]
     },
-    "config": {
-      "style": {
-          "cell": {
-              "stroke": "transparent"
-          }
+    "legend": {"title": "Time of Day"}
+  },
+    "tooltip": [
+      { "field": "Dayweek", "type": "nominal", "title": "Day of the Week" },
+      { "field": "count","aggregate": "count", "type": "quantitative", "title": "Count" }
+    ]
+  },
+  "width": 350,
+  "config": {
+    "style": {
+      "cell": {
+        "stroke": "transparent"
       }
+    },
+    "background": "#dddcda"
   }
-  }
+}

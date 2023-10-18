@@ -1,0 +1,265 @@
+﻿State,Year,Count
+Australian Capital Territory,1989,32
+Australian Capital Territory,1990,26
+Australian Capital Territory,1991,17
+Australian Capital Territory,1992,20
+Australian Capital Territory,1993,12
+Australian Capital Territory,1994,17
+Australian Capital Territory,1995,15
+Australian Capital Territory,1996,23
+Australian Capital Territory,1997,17
+Australian Capital Territory,1998,22
+Australian Capital Territory,1999,19
+Australian Capital Territory,2000,18
+Australian Capital Territory,2001,16
+Australian Capital Territory,2002,10
+Australian Capital Territory,2003,11
+Australian Capital Territory,2004,9
+Australian Capital Territory,2005,26
+Australian Capital Territory,2006,13
+Australian Capital Territory,2007,14
+Australian Capital Territory,2008,14
+Australian Capital Territory,2009,12
+Australian Capital Territory,2010,19
+Australian Capital Territory,2011,6
+Australian Capital Territory,2012,12
+Australian Capital Territory,2013,7
+Australian Capital Territory,2014,10
+Australian Capital Territory,2015,15
+Australian Capital Territory,2016,10
+Australian Capital Territory,2017,5
+Australian Capital Territory,2018,9
+Australian Capital Territory,2019,6
+Australian Capital Territory,2020,7
+Australian Capital Territory,2021,9
+New South Wales,1989,959
+New South Wales,1990,797
+New South Wales,1991,663
+New South Wales,1992,649
+New South Wales,1993,581
+New South Wales,1994,646
+New South Wales,1995,620
+New South Wales,1996,581
+New South Wales,1997,576
+New South Wales,1998,556
+New South Wales,1999,577
+New South Wales,2000,603
+New South Wales,2001,524
+New South Wales,2002,561
+New South Wales,2003,539
+New South Wales,2004,510
+New South Wales,2005,508
+New South Wales,2006,496
+New South Wales,2007,435
+New South Wales,2008,374
+New South Wales,2009,454
+New South Wales,2010,405
+New South Wales,2011,364
+New South Wales,2012,369
+New South Wales,2013,333
+New South Wales,2014,307
+New South Wales,2015,350
+New South Wales,2016,380
+New South Wales,2017,389
+New South Wales,2018,347
+New South Wales,2019,353
+New South Wales,2020,284
+New South Wales,2021,203
+Northern Territory,1989,61
+Northern Territory,1990,68
+Northern Territory,1991,67
+Northern Territory,1992,54
+Northern Territory,1993,44
+Northern Territory,1994,41
+Northern Territory,1995,61
+Northern Territory,1996,72
+Northern Territory,1997,60
+Northern Territory,1998,69
+Northern Territory,1999,49
+Northern Territory,2000,51
+Northern Territory,2001,50
+Northern Territory,2002,55
+Northern Territory,2003,53
+Northern Territory,2004,35
+Northern Territory,2005,55
+Northern Territory,2006,45
+Northern Territory,2007,58
+Northern Territory,2008,75
+Northern Territory,2009,31
+Northern Territory,2010,50
+Northern Territory,2011,45
+Northern Territory,2012,49
+Northern Territory,2013,37
+Northern Territory,2014,39
+Northern Territory,2015,49
+Northern Territory,2016,45
+Northern Territory,2017,31
+Northern Territory,2018,50
+Northern Territory,2019,36
+Northern Territory,2020,31
+Northern Territory,2021,26
+Queensland,1989,428
+Queensland,1990,399
+Queensland,1991,395
+Queensland,1992,416
+Queensland,1993,396
+Queensland,1994,418
+Queensland,1995,456
+Queensland,1996,385
+Queensland,1997,360
+Queensland,1998,279
+Queensland,1999,314
+Queensland,2000,317
+Queensland,2001,324
+Queensland,2002,322
+Queensland,2003,310
+Queensland,2004,311
+Queensland,2005,330
+Queensland,2006,335
+Queensland,2007,360
+Queensland,2008,328
+Queensland,2009,331
+Queensland,2010,249
+Queensland,2011,269
+Queensland,2012,280
+Queensland,2013,271
+Queensland,2014,223
+Queensland,2015,243
+Queensland,2016,251
+Queensland,2017,247
+Queensland,2018,245
+Queensland,2019,219
+Queensland,2020,277
+Queensland,2021,207
+South Australia,1989,222
+South Australia,1990,226
+South Australia,1991,184
+South Australia,1992,165
+South Australia,1993,218
+South Australia,1994,159
+South Australia,1995,181
+South Australia,1996,181
+South Australia,1997,148
+South Australia,1998,168
+South Australia,1999,151
+South Australia,2000,166
+South Australia,2001,153
+South Australia,2002,154
+South Australia,2003,157
+South Australia,2004,139
+South Australia,2005,148
+South Australia,2006,117
+South Australia,2007,124
+South Australia,2008,99
+South Australia,2009,119
+South Australia,2010,118
+South Australia,2011,103
+South Australia,2012,94
+South Australia,2013,98
+South Australia,2014,108
+South Australia,2015,102
+South Australia,2016,86
+South Australia,2017,100
+South Australia,2018,80
+South Australia,2019,114
+South Australia,2020,93
+South Australia,2021,72
+Tasmania,1989,80
+Tasmania,1990,71
+Tasmania,1991,77
+Tasmania,1992,74
+Tasmania,1993,58
+Tasmania,1994,59
+Tasmania,1995,57
+Tasmania,1996,64
+Tasmania,1997,32
+Tasmania,1998,48
+Tasmania,1999,53
+Tasmania,2000,43
+Tasmania,2001,61
+Tasmania,2002,37
+Tasmania,2003,41
+Tasmania,2004,58
+Tasmania,2005,51
+Tasmania,2006,55
+Tasmania,2007,45
+Tasmania,2008,39
+Tasmania,2009,63
+Tasmania,2010,31
+Tasmania,2011,24
+Tasmania,2012,31
+Tasmania,2013,36
+Tasmania,2014,33
+Tasmania,2015,34
+Tasmania,2016,37
+Tasmania,2017,32
+Tasmania,2018,32
+Tasmania,2019,29
+Tasmania,2020,36
+Tasmania,2021,29
+Victoria,1989,776
+Victoria,1990,548
+Victoria,1991,503
+Victoria,1992,396
+Victoria,1993,435
+Victoria,1994,377
+Victoria,1995,418
+Victoria,1996,417
+Victoria,1997,377
+Victoria,1998,390
+Victoria,1999,383
+Victoria,2000,407
+Victoria,2001,444
+Victoria,2002,397
+Victoria,2003,330
+Victoria,2004,343
+Victoria,2005,346
+Victoria,2006,337
+Victoria,2007,332
+Victoria,2008,303
+Victoria,2009,290
+Victoria,2010,288
+Victoria,2011,287
+Victoria,2012,282
+Victoria,2013,243
+Victoria,2014,248
+Victoria,2015,252
+Victoria,2016,290
+Victoria,2017,259
+Victoria,2018,213
+Victoria,2019,266
+Victoria,2020,211
+Victoria,2021,174
+Western Australia,1989,242
+Western Australia,1990,196
+Western Australia,1991,207
+Western Australia,1992,200
+Western Australia,1993,209
+Western Australia,1994,211
+Western Australia,1995,209
+Western Australia,1996,247
+Western Australia,1997,197
+Western Australia,1998,223
+Western Australia,1999,218
+Western Australia,2000,212
+Western Australia,2001,165
+Western Australia,2002,179
+Western Australia,2003,180
+Western Australia,2004,178
+Western Australia,2005,163
+Western Australia,2006,200
+Western Australia,2007,235
+Western Australia,2008,205
+Western Australia,2009,191
+Western Australia,2010,193
+Western Australia,2011,179
+Western Australia,2012,183
+Western Australia,2013,162
+Western Australia,2014,183
+Western Australia,2015,159
+Western Australia,2016,193
+Western Australia,2017,159
+Western Australia,2018,158
+Western Australia,2019,163
+Western Australia,2020,154
+Western Australia,2021,123

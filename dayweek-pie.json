@@ -1,35 +1,33 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "description": "A simple pie chart with embedded data.",
-    "data": {"url": "Crash_Data.csv"},
-    "transform": [
-        {
-          "aggregate": [{ "op": "count", "field": "Dayweek", "as": "count" }],
-          "groupby": ["Dayweek"]
-        }
-      ],
-    "mark": "arc",
-    "encoding": {
-      "theta": {"field": "count", "type": "quantitative", "stack": true},
-      "color": {
-        "field": "Dayweek", 
-        "type": "nominal", 
-        "sort": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday","Sunday"],
-        "scale": {
-            "domain": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-            "range": ["#1f77b4", "#ff7f0e", "#2ca02c", "#d62728", "#9467bd","#8c564b","#e377c2"]
-        }
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "A simple pie chart with embedded data.",
+  "data": {"url": "Crash_Data.csv"},
+  "mark": "bar",
+  "encoding": {
+    "y": {"aggregate": "count", "type": "quantitative", "title": "Proportion", "stack": "normalize", "axis": {"format": "%"}},
+    "x": {"field": "Dayweek", "type": "ordinal", "title": "Day of the Week",
+    "sort": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday","Sunday"]},
+    "color": {
+      "field": "Timeofday",
+      "sort": ["Day", "Night"],
+      "scale": {
+          "domain": ["Day", "Night"],
+          "range": ["#ff7f0e","#1f77b4"]
+      },
+      "legend": {"title": "Time of Day"}
     },
-      "tooltip": [
-        { "field": "Dayweek", "type": "nominal", "title": "Day of the Week" },
-        { "field": "count", "type": "quantitative", "title": "Count" }
-      ]
+    "tooltip": [
+      { "field": "Dayweek", "type": "nominal", "title": "Day of the Week" },
+      { "field": "count","aggregate": "count", "type": "quantitative", "title": "Count" }
+    ]
+  },
+  "width": 350,
+  "config": {
+    "style": {
+      "cell": {
+        "stroke": "transparent"
+      }
     },
-    "config": {
-        "style": {
-            "cell": {
-                "stroke": "transparent"
-            }
-        }
-    }
+    "background": "#dddcda"
   }
+}

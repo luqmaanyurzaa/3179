@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Car Crashes</title>
+  <title>Car Crashes in Australia (1998 to 2021)</title>
   <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
   <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
@@ -26,106 +26,124 @@
 
 <body>
 
-  <div class="page">
+  <div class="page" style="background-color: #dddcda;">
 
-    <!-- pure grid group -->
-    <div class="center" style= "height: 400px;background-image: url(./broken_glass.png)">
-      <div class="pure-u-1-1" style="width: 100%;">
-        <h1>Car Crashes</h1>
-        <IMG SRC="carskid.gif"></IMG>
-      </div>
+    <div class="pure-u-1-1 center" style="width: 100%;">
+      <h1>Car Crashes In Australia <br> (1998 to 2021)</h1>
     </div>
-    <!-- end pure grid group -->
-
-    <!-- pure grid group -->
+    <h2 class="center">Introduction</h2>
     <div class="pure-g">
       <div class="pure-u-1-2">
-        <div class="description description-left">
-          <h2>Car crash data</h2>
-          <p>Car crash Car crash Car crash Car crash Car crash Car crash</p>
-        </div>
-      </div>
-      <div class="pure-u-1-2">
-        <div id="vis1" class="vis-container"></div>
-      </div>
-    </div>
-    <!-- end pure grid group -->
-
-    <!-- pure grid group -->
-    <div class="pure-g">
-      <div class="pure-u-1-3">
-        <div class="description description-left">
-          <h2>More car crash data</h2>
-          <p>More car crash data More car crash data More car crash data</p>
-        </div>
-      </div>
-      <div class="pure-u-1-3">
-        <div id="vis4" class="vis-container"></div>
-      </div>
-      <div class="pure-u-1-3" style="width: 31.5%;">
-        <div id="vis3" class="vis-container" style="margin-left: 15px;"></div>
-      </div>
-
-    </div>
-    <!-- end pure grid group -->
-
-    <!-- pure grid group -->
-    <div class="pure-g">
-      <div class="pure-u-2-3">
-        <div id="vis2" class="vis-container"></div>
-      </div>
-      <div class="pure-u-1-3">
-        <div class="description description-right">
-          <h2>Even more crashes sadly</h2>
-          <p>Even more crashes sadlyEven more crashes sadlyEven more crashes sadlyEven more crashes sadly</p>
-        </div>
-      </div>
-
-    </div>
-    <!-- end pure grid group -->
-
-    <!-- pure grid group -->
-    <div class="pure-g">
-        <div class="pure-u-2-3">
-          <div id="vis5" class="vis-container"></div>
+        <p >In this series of visualizations, we turn our attention to a pivotal aspect of road safety in Australia – car crashes. 
+          Over the span of two decades, from 1998 to 2021, this analysis delves into the nuances of road accidents within the nation. 
+          This exploration unveils critical insights into accident frequency, trends, and the impact of road safety measures, 
+          in Australia's diverse geography. I aim to provide an
+           understanding of car accidents and their implications in Australia, shedding light on regions that have made strides 
+          in improving road safety and those that continue to grapple with persistent challenges. <b>Hover over visualizations for tooltips.</b></p>
         </div>
         <div class="pure-u-1-3">
-          <div class="description description-right">
-            <h2>Drive Safely</h2>
-            <p>Pleas drive safe Pleas drive safe Pleas drive safe Pleas drive safe Pleas drive safe</p>
-          </div>
+          <img src="download (1).jpg" style="padding-left: 20px; padding-top: 20px;" width="475">
         </div>
-  
+    </div>
+    
+    <!-- pure grid group -->
+    <h2 class="center">Crash Count Per State</h2>
+    <div class="pure-g">
+      <div class="pure-u-1-2">
+        <div id="vis5" class="vis-container"></div>
+      </div>
+      <div class="pure-u-1-2">
+        <div class="description description-right">
+          <p>The choropleth map of Australia vividly illustrates the frequency of road 
+            traffic accidents from 1998 to 2021, with each of Australia's states being color-coded to represent 
+            the number of crashes. It is immediately apparent that New South Wales consistently stands out as the state with 
+            the highest number of crashes over this extensive period. 
+            <br><br>This visualization shows the need for continued efforts in road safety, especially in New South Wales, and emphasizes 
+            the importance of comprehensive measures to reduce traffic accidents across the nation.
+          Due to the low population and hence lower number of drivers in Northern territory and Tasmania, 
+          these states have much lower counts of car crashes. <br><br>We can see that the scale changes as we move through the years with the slider
+          as the total number of crashes each year decreases. <b>Drag the slider to go through the years.</b></p>
+        </div>
+      </div>
+    </div>
+    <!-- end pure grid group -->
+
+    <!-- pure grid group -->
+      <div class="pure-g" style="padding-bottom: 1px;">
+        <div class="pure-u-1-1">
+          <h2 class="center">Crash Count By State And Time Of Day</h2>
+          <div id="vis6" class="vis-container"></div>
+        </div>
+        <div class="pure-u-1-2">
+        <div class="description description-left">
+          <p>The 2D histogram scatterplot illustrates the frequency of road accidents per state per time of day. 
+            Each circle represents a state and the approximate time of day. 
+            The size of the circles represents the number of crashes.
+            We can see that <b>the majority of crashes occur at around 3pm for all states</b>, with the highest number of crashes occurring in New South Wales.
+            We can see that there is a trend of more crashes occurring in the afternoon and evening, with the least number of crashes occurring in the early morning.</p>
+          </p>
+        </div>
+      </div>
+      <div class="pure-u-1-3" style="float: right;">
+        <img src="download.jpg" style="padding-left: 70px; padding-top: 10px;" width="432">
+      </div>
+      </div>
+    <!-- end pure grid group -->
+
+    <!-- pure grid group -->
+    <div class="pure-g" style="padding-top: 1px;">
+      <div class="pure-u-1-2">
+        <h2 class="center">Crash Count By Week Day</h2>
+        <div id="vis4" class="vis-container"></div>
+      </div>
+      <div class="pure-u-1-2">
+        <h2 class="center" style="padding-top: 1px;">Crash Count By Week Day (Normalised)</h2>
+        <div id="vis3" class="vis-container" style="padding-left: 12px;"></div>
+      </div>
+      <div class="pure-u-1-2">
+        <div class="description description-left">
+          <p>The stacked bar chart effectively portrays the crash count across different days of the week. This visualization provides a clear and intuitive overview 
+            of how accident frequency varies over the course of the week. We can see that the days with the lowest rates of crashes are Monday and Tuesday. </p>
+        </div>
+      </div>
+      <div class="pure-u-1-2">
+        <div class="description description-right">
+          <p>The normalisation of the chart more accurately distinguishes between daytime and nighttime incidents. This visualization provides a clear and intuitive overview 
+            of how accident frequency is influenced by the time of day. We can see that on Sunday there are more crashes at nighttime than any
+          other day.</p>
+        </div>
+      </div>
     </div>
     <!-- end pure grid group -->
 
     <!-- pure grid group -->
     <div class="pure-g">
-      <div class="pure-u-2-3">
-        <div id="vis6" class="vis-container"></div>
+      <div class="pure-u-1">
+        <h2 class="center">Crash Count By State Throughout The Years</h2>
+        <div id="vis7" class="vis-container"></div>
       </div>
-      <div class="pure-u-1-3">
-        <div class="description description-right">
-          <h2>First and Second Columns Combined</h2>
-          <p>The first and second columns are combined.</p>
+      <div class="pure-u-1-2">
+        <div class="description description-left">
+          <p>This line chart shows the trend of car crashes over the years. We can see that the number of crashes has been decreasing over the years. 
+            We can see that the state with the most crashes in 1998 was New South Wales, and this trend has continued over the years however 
+            the number of crashes has decreased significantly to the point of matching with Queensland in 2021.
+            This downward trend of crashes in all states can be attributed to the introduction of new safety features in cars and the introduction of new road safety laws. 
+            This may also be attributed to the advancement of technology in cars and traffic. 
+
+          </p>
         </div>
       </div>
-
+        <div class="pure-u-1-2">
+          <img src="traffic.jpg" style="padding-left: 30px; padding-top: 10px;" width="470px">
+        </div>
     </div>
-  <!-- end pure grid group -->
-
-    <div class="pure-g">
-      <div class="pure-u-1-1 small-font">
-        <p></p>
-      </div>
-    </div>
-
+    <!-- end pure grid group -->
 
   </div> <!-- end page -->
 
   <script type="text/javascript">
     var specVis1 = "./aus-map.json";
-    var specVis2 = "./line-chart-responsive.json";
+    var specVis2 = "./linechart.json";
     var specVis3 = "./state-chart.json";
     var specVis4 = "./day-and-time.json";
     var specVis5 = "./dayweek-pie.json";
@@ -150,6 +168,10 @@
     }).catch(console.error);
 
     vegaEmbed('#vis6', specVis4, { "actions": false }).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    vegaEmbed('#vis7', specVis2, { "actions": false }).then(function (result) {
       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
   </script>

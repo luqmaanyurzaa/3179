@@ -1,47 +1,89 @@
 {
-  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "data": {
-    "url": "Crash_Data.csv",
-    "format": {
-      "type": "csv"
-    }
-  },
-  "transform": [
-    {
-      "lookup": "State",
-      "from": {
-        "data": {
-          "url": "states.geojson"
-        },
-        "key": "State",
-        "fields": ["properties.STATE_NAME"]
-      }
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": "container",
+    "height": 400,
+    "params": [
+        {
+            "name": "Year_selection",
+            "value": 2021,
+            "bind": {
+                "input": "range",
+                "min": 1998,
+                "max": 2021,
+                "step": 1,
+                "name": "Year:  "
+            }
+        }
+    ],
+    "projection": {
+        "type": "equirectangular"
     },
-    {
-    "aggregate": [{"op": "count", "as": "State_count"}],
-    "groupby": ["State"]
-    }
-  ],
-  "width": 600,
-  "height": 600,
-  "projection": {
-    "type": "equirectangular"
-  },
-  "mark": {
-    "type": "geoshape",
-    "stroke": "white",
-    "strokeWidth": 0.5
-  },
-  "encoding": {
-    "color": {
-      "field": "State_count",
-      "scale": {
-        "scheme": "viridis"
+    "layer": [
+        {
+            "data": {
+                "url": "pleasework.csv"
+            },
+            "transform": [
+                {
+                    "lookup": "State",
+                    "from": {
+                        "data": {
+                            "url": "states.geojson",
+                            "format": {
+                                "property": "features"
+                            }
+                        },
+                        "key": "properties.STATE_NAME"
+                    },
+                    "as": "geo"
+                },
+                {
+                    "filter": "datum.Year == Year_selection"
+                }
+            ],
+            "mark": {
+                "type": "geoshape",
+                "stroke": "#dddcda",
+                "strokeWidth": 0.5
+            },
+            "encoding": {
+                "shape": {
+                    "field": "geo",
+                    "type": "geojson"
+                },
+                "color": {
+                    "field": "Count",
+                    "type": "quantitative",
+                    "title": "Crash Count",
+                    "scale": {
+                        "scheme": "redyellowgreen",
+                        "reverse": true
+                    },
+                    "legend": {
+                        "format": ".2s"
+                    }
+                },
+                "tooltip": [
+                  {"field": "State", "type": "nominal", "title":
+                  "State"},
+                  {
+                  "field": "Count",
+                  "type": "quantitative",
+                  "title": "Crash Count",
+                  "format": ","
+                  },
+                  {"field": "Year", "type": "quantitative", "title":
+                  "Year"}
+                  ]
+            }
+        }
+    ],
+    "config": {
+      "style": {
+          "cell": {
+              "stroke": "transparent"
+          }
       },
-      "legend": {
-        "title": "Number of Crashes"
-      }
-    }
-  },
-  "config": {}
+      "background": "#dddcda"
+  }
 }

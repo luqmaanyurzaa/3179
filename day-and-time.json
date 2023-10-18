@@ -1,47 +1,48 @@
 {
-  "$schema": "https://vega.github.io/schema/vega/v6.json",
-  "data": [
-    {
-      "name": "source",
-      "url": "Crash_Data.csv",
-      "format": {"type": "csv"}
-    }
-  ],
-  "scales": [
-    {
-      "name": "x",
-      "type": "time",
-      "domain": {"data": "source", "field": "time"},
-      "range": "width"
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {"url": "Crash_Data.csv"},
+  "mark": "circle",
+  "encoding": {
+    "x": {
+      "bin": {"maxbins": 24},
+      "field": "time",
+      "axis": {"format": "04d", "title": "Time of Day (24hr)"}
     },
-    {
-      "name": "y",
-      "type": "time",
-      "domain": {"data": "source", "field": "Dayweek"},
-      "range": "height"
+    "y": {
+      "field": "State",
+      "sort": ["New South Wales", "Victoria", "Queensland", "Western Australia", "South Australia", "Northern Territory", "Tasmania", "Australian Capital Territory"]
+      
     },
-    {
-      "name": "size",
-      "type": "linear",
-      "domain": {"data": "source", "field": "count"},
-      "range": [20, 200]
-    }
-  ],
-  "marks": [
-    {
-      "type": "symbol",
-      "from": {"data": "source"},
-      "encode": {
-        "update": {
-          "x": {"scale": "x", "field": "datetime"},
-          "y": {"scale": "y", "field": "Dayweek"},
-          "size": {"scale": "size", "field": "count"}
-        }
+    "size": {"aggregate": "count", "type": "quantitative"},
+    "color": {
+      "field": "State", 
+      "type": "nominal",
+      "scale": {
+          "domain": ["New South Wales", "Victoria", "Queensland", "Western Australia", "South Australia", "Northern Territory", "Tasmania", "Australian Capital Territory"],
+          "range": [
+            "#1f77b4",
+            "#ff7f0e",
+            "#9467bd",
+            "#bcbd22",
+            "#e377c2",
+            "#17becf",
+            "#8c564b",
+            "#d62728"
+          ]
       }
-    }
-  ],
-  "axes": [
-    {"orient": "bottom", "scale": "x", "title": "Time"},
-    {"orient": "left", "scale": "y"}
-  ]
+  },
+    "tooltip": [
+      {"field": "State", "type": "nominal"},
+      {"bin": {"maxbins": 24}},
+      {"aggregate": "count", "type": "quantitative"} 
+    ]
+},
+  "width": 700,
+  "height": 400,
+  "config": {
+    "view": {
+      "stroke": "transparent"
+    },
+    "background": "#dddcda"
+  }
 }
